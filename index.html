@@ -1,29 +1,88 @@
----
-workflow: greenlight-landing-page
-risk_tier: minimal, one-off educational use with no personal data, automated decisions, or real-world effects on people
-owner: Student / assignment author
-last_audit: 2026-10-04
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EU AI Act Audit: Greenlight Ireland Landing Page</title>
+<style>
+  :root {
+    --bg: #f6f5f1; --surface: #ffffff; --text: #16181d;
+    --muted: #5d6470; --accent: #1f6feb; --border: #e3e1da;
+    --pass: #137a4b; --pass-bg: #e6f4ec;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1115; --surface: #171a21; --text: #f2f3f5;
+      --muted: #9aa1ad; --accent: #6aa5ff; --border: #272b35;
+      --pass: #5fd49a; --pass-bg: #12291f;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6; padding: 1.25rem;
+    padding-top: max(1.25rem, env(safe-area-inset-top));
+    padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
+    display: flex; justify-content: center;
+  }
+  main {
+    width: 100%; max-width: 40rem; background: var(--surface);
+    border: 1px solid var(--border); border-radius: 1.5rem; padding: 2rem 1.5rem;
+  }
+  .meta { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; }
+  h1 { font-size: clamp(1.7rem, 7vw, 2.4rem); line-height: 1.15; letter-spacing: -.02em; }
+  .lede { margin-top: .75rem; color: var(--muted); }
+  h2 { margin-top: 2rem; font-size: 1.15rem; color: var(--accent); }
+  p { margin-top: .6rem; }
+  ol { margin-top: .6rem; padding-left: 1.25rem; }
+  li { margin-top: .4rem; }
+  .tablewrap { margin-top: .75rem; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; min-width: 30rem; font-size: .95rem; }
+  th, td { text-align: left; vertical-align: top; padding: .65rem .6rem; border-top: 1px solid var(--border); }
+  th { color: var(--muted); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; border-top: none; }
+  .pass { display: inline-block; padding: .1rem .55rem; border-radius: 999px; background: var(--pass-bg); color: var(--pass); font-weight: 700; font-size: .8rem; }
+  .note { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: .9rem; color: var(--muted); }
+  @media (min-width: 600px) { main { padding: 3rem 2.5rem; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="meta">EU AI Act audit · Audit date: 3 November 2026</div>
+  <h1>Greenlight Ireland landing page</h1>
+  <p class="lede">An audit of one AI-assisted workflow: using ChatGPT to generate the HTML code for a conceptual educational prototype of a kids’ fintech landing page.</p>
 
-# Greenlight Ireland Fintech Landing Page
+  <h2>1. Classify</h2>
+  <p><strong>Risk tier: minimal risk.</strong> ChatGPT was used as a drafting assistant to generate HTML code for a conceptual educational prototype. No personal, customer, employee or confidential data was processed, and the output does not make decisions about anyone’s rights, money, health, jobs or access to services.</p>
 
-## Risk classification
-This workflow is minimal risk because ChatGPT was used to generate HTML code for a conceptual educational prototype. No personal, customer, employee, or confidential data was processed, and the output does not make decisions affecting people's rights, money, health, jobs, or access to services.
+  <h2>2. Check</h2>
+  <p><strong>Fundamental rights impact assessment: not needed.</strong> This use is not high-risk, so no assessment is required.</p>
 
-## Five-point hygiene check
-bias:         PASS - The workflow uses public strategic concepts and structural content, with no individual-level profiling or decision-making.
+  <h2>3. Apply: five-point hygiene check</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Check</th><th>Result</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr><td>Bias</td><td><span class="pass">PASS</span></td><td>The workflow uses public strategic concepts and structural content, with no individual-level profiling or decision-making.</td></tr>
+        <tr><td>Privacy</td><td><span class="pass">PASS</span></td><td>No personal, customer, employee or confidential data was entered into the AI system.</td></tr>
+        <tr><td>Consent</td><td><span class="pass">PASS</span></td><td>No third-party personal data was processed, and the assignment context permits AI assistance as described.</td></tr>
+        <tr><td>Attribution</td><td><span class="pass">PASS</span></td><td>The module instructor and peers are aware that AI was used to assist in creating the assignment.</td></tr>
+        <tr><td>Transparency</td><td><span class="pass">PASS</span></td><td>The AI-assisted nature of the work is disclosed to the relevant academic audience.</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-privacy:      PASS - No personal, customer, employee, or confidential data was entered into the AI system.
+  <h2>4. Document: remediation, in order</h2>
+  <ol>
+    <li>Keep a brief record of the AI assistance used, including that ChatGPT generated or assisted with the HTML code, so the AI contribution can be explained if requested.</li>
+    <li>Verify the generated code yourself before submission: confirm the file is complete (an earlier version was cut off before its closing tags) and replace any placeholder text such as the product name.</li>
+    <li>Check the final work against your module’s academic integrity and AI-use requirements.</li>
+    <li>Repeat this audit, with a new date, whenever the workflow changes.</li>
+  </ol>
 
-consent:      PASS - No third-party personal data was processed, and the assignment context permits AI assistance as described.
-
-attribution:  PASS - The module instructor and peers are aware that AI was used to assist in creating the assignment.
-
-transparency: PASS - The AI-assisted nature of the work is disclosed to the relevant academic audience.
-
-## Remediation (do these in order)
-1. Keep a brief record of the AI assistance used, including that ChatGPT generated or assisted with the HTML code, so the AI contribution can be explained if requested.
-2. Verify the generated code and substantive project claims yourself before submission, and make sure the final work complies with your module's academic integrity and AI-use requirements.
-
-## Note
-This is general education on the EU AI Act, not legal advice.
+  <p class="note">This is general education on the EU AI Act, not legal advice.</p>
+</main>
+</body>
+</html>
